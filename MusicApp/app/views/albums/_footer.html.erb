@@ -1,0 +1,22 @@
+<footer>
+  <form class="edit_button" action="<%=  %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="New Track">
+  </form>
+
+  <form class="edit_button" action="<%= edit_album_url %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Edit Album">
+  </form>
+
+  <form class="edit_button" action="<%= album_url %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Destroy Album">
+  </form>
+
+  <form class="edit_button" action="<%= band_url(@album.band) %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Return to <%= @album.band.name %>">
+  </form>
+</footer>

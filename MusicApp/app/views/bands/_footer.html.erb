@@ -1,0 +1,19 @@
+<footer>
+
+
+  <form class="edit_button" action="<%= edit_band_url %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Edit Album">
+  </form>
+
+  <form class="edit_button" action="<%= band_url %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Destroy Band">
+  </form>
+
+  <form class="edit_button" action="<%= bands_url %>" method="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" name="" value="Return to Bands">
+  </form>
+</footer>
